@@ -1,0 +1,32 @@
+2. Give a write-up on the Difference between copy by value and copy by reference.
+
+  Copy by Value:
+ -----------------
+        --> Copy by values takes place in primitive data types where values are directly copied to new variables
+	--> Changes takes place in one does not effect another one
+           
+                EX: 
+               ----
+                     var n = 10
+                     var x = n
+                     console.log(x,n) o/p=> 10 10(because data present in n i.e 10 which is directly copied to x)
+ 
+
+ Copy by Reference:
+---------------------
+	--> Copy by reference takes place in non-primitive data types where values are not copied directly instead it copies address of the memory location
+           
+              EX:
+ 	     ----
+		var user = {name:"Rohith",age:24}
+ 		var admin = user;		
+		admin.name = "Changed"
+		console.log(user.name) o/p => Changed (because we are updating the name in the address so the user object will get effected)
+
+
+ 3) How to copy by value a composite datatype
+
+				There are 3 ways to copy by value for composite data types.
+				=> Using the spread (...) operator
+				=> Using the Object.assign() method
+				=> Using the JSON.stringify() and JSON.parse() methods
